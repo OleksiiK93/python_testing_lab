@@ -14,7 +14,7 @@ class TestCoffeeShop(unittest.TestCase):
                 Drink('Mocha', 3.50),
                 Drink('Latte', 4.25)
             ])
-        self.customer = Customer("Oleksii", 13.00)
+        self.customer = Customer("Oleksii", 13.00, 30)
     
     def test_initialization(self):
         self.assertEqual('Little Vienna', self.coffee_shop.name)
@@ -24,3 +24,8 @@ class TestCoffeeShop(unittest.TestCase):
     def test_can_sell_drink_to_customer(self):
         self.coffee_shop.sell(self.coffee_shop.drinks[0], self.customer)
         self.assertEqual(3.0, self.coffee_shop.till)
+
+    def test_wont_sell_coffee_to_minor(self):
+        customer = Customer("Andrew", 100.0, 15)
+        self.coffee_shop.sell(self.coffee_shop.drinks[0], customer)
+        self.assertEqual(0, self.coffee_shop.till)
