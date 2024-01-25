@@ -3,3 +3,7 @@ class CoffeeShop:
         self.name = name
         self.till = till
         self.drinks = drinks
+    
+    def sell(self, drink, customer):
+        customer.buy(drink)
+        self.till += drink.price

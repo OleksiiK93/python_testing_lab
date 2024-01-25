@@ -6,5 +6,5 @@ class Customer:
     def reduce_wallet(self, amount):
         self.wallet -= amount
 
-    def buy_drink(self, drink):
+    def buy(self, drink):
         self.reduce_wallet(drink.price)
