@@ -9,10 +9,10 @@ class TestCoffeeShop(unittest.TestCase):
             'Little Vienna',
             0.00,
             [
-                Drink('Espresso', 3.00),
-                Drink('Tea', 2.00),
-                Drink('Mocha', 3.50),
-                Drink('Latte', 4.25)
+                Drink('Espresso', 3.00, 65),
+                Drink('Tea', 2.00, 50),
+                Drink('Americano', 3.50, 130),
+                Drink('Latte', 4.25, 65)
             ])
         self.customer = Customer("Oleksii", 13.00, 30)
     
