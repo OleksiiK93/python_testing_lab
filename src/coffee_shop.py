@@ -5,6 +5,7 @@ class CoffeeShop:
         self.drinks = drinks
     
     def sell(self, drink, customer):
-        if customer.age > 15 or drink.name == 'Tea':
-            customer.buy(drink)
-            self.till += drink.price
+        if customer.energy <= 100:
+            if customer.age > 15 or drink.name == 'Tea':
+                customer.buy(drink)
+                self.till += drink.price

@@ -9,4 +9,5 @@ class TestDrink(unittest.TestCase):
     def test_initialization(self):
         self.assertEqual("Americano", self.drink.name)
         self.assertEqual(3.50, self.drink.price)
+        self.assertEqual(120, self.drink.caffeine_level)
         

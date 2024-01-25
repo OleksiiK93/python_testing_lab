@@ -9,5 +9,6 @@ class Customer:
         self.wallet -= amount
 
     def buy(self, drink):
-        self.reduce_wallet(drink.price)
-        self.energy += drink.caffeine_level
+        if self.wallet >= drink.price:
+            self.reduce_wallet(drink.price)
+            self.energy += drink.caffeine_level

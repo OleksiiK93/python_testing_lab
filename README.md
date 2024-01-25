@@ -2,7 +2,7 @@
 
 ## Task
 
-The task for this lab is to plan and create an object oriented model of a Coffe Shop, with Drinks and Customers! You should write tests for all your classes and methods. Make sure that you create a separate file for each class and a separate test file for each class.
+The task for this lab is to plan and create an object oriented model of a Coffee Shop, with Drinks and Customers! You should write tests for all your classes and methods. Make sure that you create a separate file for each class and a separate test file for each class.
 
 ## Learning Objectives
 
