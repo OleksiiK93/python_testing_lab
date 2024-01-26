@@ -4,8 +4,15 @@ class CoffeeShop:
         self.till = till
         self.drinks = drinks
     
-    def sell(self, drink, customer):
+    def sell_drink(self, drink, customer):
         if customer.energy <= 100:
-            if customer.age > 15 or drink.name == 'Tea':
-                customer.buy(drink)
-                self.till += drink.price
+            if customer.age > 15 or drink == self.drinks['tea']:
+                customer.buy_drink(drink)
+                self.till += drink['info'].price
+                drink['amount'] -= 1
+
+    def stock(self):
+        stock = {}
+        for key, value in self.drinks.items():
+            stock[key] = value['amount']
+        return stock
