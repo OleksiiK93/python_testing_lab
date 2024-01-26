@@ -52,5 +52,11 @@ class TestCoffeeShop(unittest.TestCase):
         self.assertEqual(109, self.coffee_shop.drinks['americano']['amount'])
 
     def test_shop_can_keep_track_of_drinks_available(self):
+        self.assertEqual(110, self.coffee_shop.stock()['americano'])
         self.coffee_shop.sell_drink(self.coffee_shop.drinks['americano'], self.customer)
         self.assertEqual(109, self.coffee_shop.stock()['americano'])
+
+    def test_shop_can_check_total_value_of_drinks(self):
+        self.assertEqual(1750.00, self.coffee_shop.stock_value())
+        self.coffee_shop.sell_drink(self.coffee_shop.drinks['latte'], self.customer)
+        self.assertEqual(1745.75, self.coffee_shop.stock_value())

@@ -16,3 +16,9 @@ class CoffeeShop:
         for key, value in self.drinks.items():
             stock[key] = value['amount']
         return stock
+    
+    def stock_value(self):
+        total_value = 0
+        for drink in self.drinks.values():
+            total_value += drink['info'].price*drink['amount']
+        return total_value
